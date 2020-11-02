@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Filter Project</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script
+  src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+</script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<div id = 'head'>
+  <br>
+<i class="fas fa-camera-retro" style="font-size:120px;color:#83C7E6;"></i>
+<p id = 'Picture'>Picture Fun</p>
+<p id = 'Iris'>Mini Project Made By Iris Li</p>
+<br>
+</div>
+
+<h2>&#127912; Adding Filters To Your Image &#127912; </h2>
+
+
+<canvas id='Cvs1'>
+</canvas>
+<br>
+<p class="wsize"> Load Image &#127745;</p>
+<p>
+  <input type = "file" multiple = "false"   accept = "image/*" id = "loadFile"          onchange = "loadImage()">
+</p>
+<p class="wsize">Please Choose A Filter &#129313;</p>
+<input type = "button" class="button" value="Rainbow" onclick="doRainbow()">
+<input type = "button" class="button" value="Grayscale" onclick="doGray()">
+<input type = "button" class="button" value="Blur" onclick="doBlur()">
+<input type = "button" class="button" value="Red" onclick="doRed()">
+<input type = "button" class="button" value="Add Frame" onclick="doFrame()">
+<input type = "button" class="button" value="Special Color" onclick="doSpecial()">
+<br>
+<p class="wsize">
+  See Your Original Image Here &#129488;
+  <br>
+  <br>
+<input type = "button" class="button" value="resetCanvas" onclick="resetCanvas()">
+</p>
+<br>
+
+
+
+
+<h2>&#9757;&#127995; Creating Composite Using Green Screen &#9757;&#127995;</h2>
+<canvas id='fgCan'>
+</canvas>
+<canvas id='bgCan'>
+</canvas>
+<p class = "wsize">
+  &#9757;&#127995; Foreground With Green:
+  <input type = "file" multiple = "false"   accept = "image/*" id = "fgFile"          onchange = "loadForeground()">
+</p>
+<p class = "wsize">
+  &#9996;&#127995; Background You Want:
+  <input type = "file" multiple="false" accept = "image/*" id = "bgFile" onchange = "loadBackground()">
+</p>
+<input type = "button" class="button" value="Create Composite" onclick="GreenScreen()">
+<input type = "button" class="button" value="Clear Canvases" onclick="clearCanvas()">
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
